@@ -1,0 +1,25 @@
+{
+  "builders": [
+    {
+      "type": "googlecompute",
+	  "account_file": "../credentials.json",
+      "project_id": "playground-s-11-887d60d3",
+      "zone": "europe-west2-a",
+      "source_image_family": "ubuntu-1604-lts",
+      "ssh_username": "packer",
+      "image_name": "nginx-{{timestamp}}",
+      "image_family": "webserver"
+    }
+  ],
+  "provisioners": [                                                           
+      {                                                                         
+        "type": "file",                                                           
+        "source": "./index.html",                                           
+        "destination": "/tmp/index.html"                                            
+      },
+      {                                                                         
+        "type": "shell",                                                        
+        "script": "setup.sh"                                                             
+      }
+  ]
+}
