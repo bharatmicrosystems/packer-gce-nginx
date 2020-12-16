@@ -1,0 +1,10 @@
+project     = "<GCP_PROJECT_NAME>"
+region      = "europe-west2"
+instance_name = "nginx-custom-instance"
+instance_machine_type = "n1-standard-1"
+instance_zone = "europe-west2-a"
+instance_image = "GCP_PROJECT_NAME/webserver"
+subnet_name = "default"
+tags = ["webserver"]
+startup_script = ""
+scopes = ["storage-rw"]

@@ -2,8 +2,8 @@
   "builders": [
     {
       "type": "googlecompute",
-	  "account_file": "../credentials.json",
-      "project_id": "playground-s-11-887d60d3",
+      "account_file": "credentials.json",
+      "project_id": "<GCP_PROJECT_NAME>",
       "zone": "europe-west2-a",
       "source_image_family": "ubuntu-1604-lts",
       "ssh_username": "packer",

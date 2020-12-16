@@ -6,3 +6,9 @@ crash.log
 
 # For built boxes
 *.box
+
+# For terraform
+credentials.json
+.terraform/
+terraform.tfstate*
+terraform.tfvars
